@@ -4,9 +4,6 @@
 
 The Knapsack Problem Solver is an interactive web application that demonstrates solving the classic optimization problem using a Genetic Algorithm. This tool allows users to add items with specific weights and values, then uses a genetic algorithm to find the optimal combination of items that maximizes total value while staying within a given knapsack capacity.
 
-<img width="844" alt="Screenshot 2025-03-24 at 8 09 47 PM" src="https://github.com/user-attachments/assets/587a2c38-139c-48b0-a8aa-fe559055bf74" />
-
-
 https://github.com/user-attachments/assets/af306335-8a68-41be-a5f3-7de81a39bf6e
 
 
