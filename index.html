@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knapsack Genetic Algorithm Solver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #candidatesTable, #resultsTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        #candidatesTable th, #candidatesTable td,
+        #resultsTable th, #resultsTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+        #addCandidateForm {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Knapsack Problem Solver with Genetic Algorithm</h1>
+    
+    <div id="addCandidateForm">
+        <input type="number" id="weightInput" placeholder="Weight" min="0" step="0.1">
+        <input type="number" id="valueInput" placeholder="Value" min="0" step="0.1">
+        <input type="color" id="colorInput">
+        <button onclick="addCandidate()">Add Candidate</button>
+    </div>
+
+    <div>
+        <label>Knapsack Capacity: 
+            <input type="number" id="capacityInput" min="0" step="0.1" placeholder="Max Capacity">
+        </label>
+    </div>
+
+    <table id="candidatesTable">
+        <thead>
+            <tr>
+                <th>Weight</th>
+                <th>Value</th>
+                <th>Value/Weight Ratio</th>
+                <th>Color</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="candidatesTableBody"></tbody>
+    </table>
+
+    <button onclick="runGeneticAlgorithm()">Run Genetic Algorithm</button>
+
+    <div>
+        <h2>Genetic Algorithm Results</h2>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Total Weight</th>
+                    <th>Total Value</th>
+                </tr>
+            </thead>
+            <tbody id="resultsTableBody"></tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2>Candidate Canvas</h2>
+        <canvas id="candidateCanvas" width="600" height="200"></canvas>
+        <h2>Knapsack Canvas</h2>
+        <canvas id="knapsackCanvas" width="600" height="200"></canvas>
+    </div>
+
+    <script src="knapsack.js"></script>
+</body>
+</html>
